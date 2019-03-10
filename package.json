@@ -1,0 +1,19 @@
+{
+  "name": "my-weight-transitions",
+  "version": "0.0.0",
+  "description": "Make a note of my weight transitions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjirou/my-weight-transitions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kjirou/my-weight-transitions/issues"
+  },
+  "homepage": "https://github.com/kjirou/my-weight-transitions#readme"
+}
