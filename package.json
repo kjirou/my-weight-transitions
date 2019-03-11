@@ -5,7 +5,10 @@
     "serve:production": "$(npm bin)/parcel docs/index.html"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
     "parcel-bundler": "^1.12.0"
