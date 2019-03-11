@@ -1,4 +1,7 @@
 *.DS_Store
 *.swp
+/.cache/
 /node_modules/
 npm-debug.log
+
+/dist/

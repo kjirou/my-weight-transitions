@@ -1,5 +1,8 @@
 {
-  "scripts": {},
+  "scripts": {
+    "build": "$(npm bin)/parcel build --out-dir docs src/index.html",
+    "dev": "$(npm bin)/parcel src/index.html"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
