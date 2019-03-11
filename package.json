@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build": "$(npm bin)/parcel build --out-dir docs src/index.html",
-    "dev": "$(npm bin)/parcel src/index.html"
+    "dev": "$(npm bin)/parcel src/index.html",
+    "serve:production": "$(npm bin)/parcel docs/index.html"
   },
   "private": true,
   "dependencies": {},
