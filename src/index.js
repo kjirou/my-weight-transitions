@@ -22,7 +22,10 @@ const WeightTransitionsGraph = () => {
     <LineChart width={600} height={300} data={data}>
       <Line type="monotone" dataKey="weight" stroke="#8884d8" />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <XAxis dataKey="date"/>
+      <XAxis
+        dataKey="date"
+        padding={{left: 10, right: 10}}
+      />
       <YAxis/>
     </LineChart>
   );
