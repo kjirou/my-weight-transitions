@@ -45,18 +45,18 @@ const mapWeightTransitionsToGraphData = (weightTransitions) => {
   const startDate = dateStringToDate(weightTransitions[0].date);
   const endDate = dateStringToDate(weightTransitions[weightTransitions.length - 1].date);
   let currentTime = startDate.getTime();
-  const ticks = [];
+  const plotOfDates = [];
   while (true) {
     const currentDate = new Date(currentTime);
     const currentDateString = dateToDateString(currentDate);
-    const tick = {
+    const plotOfDate = {
       dateTime: currentTime,
     };
     const found = findWeightTransitionByDate(weightTransitions, currentDateString);
     if (found) {
-      tick.weight = found.weight;
+      plotOfDate.weight = found.weight;
     }
-    ticks.push(tick);
+    plotOfDates.push(plotOfDate);
     if (currentTime >= endDate.getTime()) {
       if (currentTime !== endDate.getTime()) {
         throw new Error('It should equal.');
@@ -66,11 +66,11 @@ const mapWeightTransitionsToGraphData = (weightTransitions) => {
     currentTime += 24 * 60 * 60 * 1000;
   }
 
-  if (ticks[0].weight === undefined || ticks[ticks.length - 1].weight === undefined) {
+  if (plotOfDates[0].weight === undefined || plotOfDates[plotOfDates.length - 1].weight === undefined) {
     throw new Error('They should have their weight.');
   }
 
-  return ticks;
+  return plotOfDates;
 };
 
 const WeightTransitionsGraph = () => {
