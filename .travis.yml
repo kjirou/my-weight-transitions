@@ -1,8 +1,10 @@
 language: node_js
 node_js:
   - "10"
-script:
+before_script:
   - npm run test
+script:
+  - rm -r docs
 deploy:
   provider: pages
   skip-cleanup: true
