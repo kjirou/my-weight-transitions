@@ -4,7 +4,7 @@
 
 Make a note of my weight transitions.
 
-- [As a JSON file](/weight-transitions.json)
+- [As a JSON file](/src/weight-transitions.json)
 - [As a graph on the web](https://kjirou.github.io/my-weight-transitions/)
 
 
