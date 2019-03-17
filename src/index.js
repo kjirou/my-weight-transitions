@@ -88,7 +88,9 @@ const WeightTransitionsGraph = () => {
         tickFormatter={dateTime => dateToDateString(new Date(dateTime)).replace(/^(\d+)-(\d+)-(\d+)$/, '$1/$2/$3')}
         type="number"
       />
-      <YAxis/>
+      <YAxis
+        unit="kg"
+      />
     </LineChart>
   );
 };
