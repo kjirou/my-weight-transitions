@@ -74,7 +74,8 @@ const mapWeightTransitionsToGraphData = (weightTransitions) => {
 };
 
 const WeightTransitionsGraph = () => {
-  const data = mapWeightTransitionsToGraphData(weightTransitions.weightTransitions);
+  const data = mapWeightTransitionsToGraphData(weightTransitions.weightTransitions)
+    .filter(e => e.weight !== undefined);
 
   return (
     <LineChart width={800} height={400} data={data}>
@@ -82,9 +83,10 @@ const WeightTransitionsGraph = () => {
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
       <XAxis
         dataKey="dateTime"
-        interval="preserveStartEnd"
-        padding={{left: 10, right: 10}}
-        tickFormatter={dateTime => dateToDateString(new Date(dateTime)).replace(/^\d+-(\d+)-(\d+)$/, '$1/$2')}
+        domain={['dataMin', 'dataMax']}
+        padding={{left: 20, right: 20}}
+        tickFormatter={dateTime => dateToDateString(new Date(dateTime)).replace(/^(\d+)-(\d+)-(\d+)$/, '$1/$2/$3')}
+        type="number"
       />
       <YAxis/>
     </LineChart>
