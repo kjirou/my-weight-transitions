@@ -4,6 +4,7 @@ const {
   CartesianGrid,
   LineChart,
   Line,
+  Tooltip,
   XAxis,
   YAxis,
 } = require('recharts');
@@ -90,6 +91,16 @@ const WeightTransitionsGraph = () => {
       />
       <YAxis
         unit="kg"
+      />
+      <Tooltip
+        formatter={(value, name, props) => {
+          console.log(value);
+          console.log(typeof value);
+          return value.toFixed(2) + 'kg';
+        }}
+        labelFormatter={(value, name, props) => {
+          return dateToDateString(new Date(value)).replace(/^(\d+)-(\d+)-(\d+)$/, '$1/$2/$3');
+        }}
       />
     </LineChart>
   );
