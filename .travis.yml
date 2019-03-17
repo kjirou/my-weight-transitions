@@ -9,4 +9,4 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
-    branch: auto-deploy
+    branch: test-auto-deploy
