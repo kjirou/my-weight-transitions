@@ -9,7 +9,7 @@ const {
   YAxis,
 } = require('recharts');
 
-const weightTransitions = require('../weight-transitions.json');
+const weightTransitions = require('./weight-transitions.json');
 
 const dateToDateString = (date) => {
   const year = date.getUTCFullYear().toString().padStart(4, '0');
