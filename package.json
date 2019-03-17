@@ -2,7 +2,9 @@
   "scripts": {
     "build": "$(npm bin)/parcel build --out-dir docs src/index.html",
     "dev": "$(npm bin)/parcel src/index.html",
-    "serve:production-test": "$(npm bin)/parcel docs/index.html"
+    "production-test": "npm run production-test:prepare && npm run production-test:run",
+    "production-test:prepare": "rm -rf ./production-test && mkdir production-test && cp -r docs production-test/my-weight-transitions",
+    "production-test:run": "$(npm bin)/http-server production-test"
   },
   "private": true,
   "dependencies": {
