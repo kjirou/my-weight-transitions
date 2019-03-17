@@ -10,6 +10,13 @@ const {
 
 const weightTransitions = require('../weight-transitions.json');
 
+const dateToDateString = (date) => {
+  const year = date.getUTCFullYear().toString().padStart(4, '0');
+  const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+  const day = date.getUTCDate().toString().padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 /**
  * @return {Array<Object>} Date list from the first day of measurement to the last day.
  *                         e.g. [{dateTime: <timestamp>[, weight: <float>]}, ...]
@@ -30,12 +37,6 @@ const mapWeightTransitionsToGraphData = (weightTransitions) => {
       throw new Error('Contains an incorrectly formatted date.');
     }
     return date;
-  };
-  const dateToDateString = (date) => {
-    const year = date.getUTCFullYear().toString().padStart(4, '0');
-    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
-    const day = date.getUTCDate().toString().padStart(2, '0');
-    return `${year}-${month}-${day}`;
   };
   const findWeightTransitionByDate = (weightTransitions, date) => {
     return weightTransitions.find(e => e.date === date);
@@ -73,22 +74,17 @@ const mapWeightTransitionsToGraphData = (weightTransitions) => {
 };
 
 const WeightTransitionsGraph = () => {
-  const data = weightTransitions.weightTransitions.map(weightTransition => {
-    return {
-      weight: weightTransition.weight,
-      date: weightTransition.date,
-    };
-  });
+  const data = mapWeightTransitionsToGraphData(weightTransitions.weightTransitions);
 
   return (
     <LineChart width={800} height={400} data={data}>
       <Line type="monotone" dataKey="weight" stroke="#8884d8" />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
       <XAxis
-        dataKey="date"
+        dataKey="dateTime"
         interval="preserveStartEnd"
         padding={{left: 10, right: 10}}
-        tickFormatter={(dateString) => dateString.replace(/^\d+-(\d+)-(\d+)$/, '$1/$2')}
+        tickFormatter={dateTime => dateToDateString(new Date(dateTime)).replace(/^\d+-(\d+)-(\d+)$/, '$1/$2')}
       />
       <YAxis/>
     </LineChart>
