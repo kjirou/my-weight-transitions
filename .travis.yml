@@ -1,5 +1,15 @@
 language: node_js
 node_js:
   - "10"
-script:
+before_script:
   - npm run test
+script:
+  # TODO: Want to run it at the time of branch=master
+  - npm run deploy
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
