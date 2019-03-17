@@ -4,7 +4,7 @@ const {describe, it} = require('mocha');
 const path = require('path');
 
 describe('weight-transitions.json', function() {
-  const weightTransitionsJson = fs.readFileSync(path.join(__dirname, '../weight-transitions.json')).toString();
+  const weightTransitionsJson = fs.readFileSync(path.join(__dirname, '../src/weight-transitions.json')).toString();
 
   it('should be a JSON file', function() {
     JSON.parse(weightTransitionsJson);
