@@ -94,8 +94,6 @@ const WeightTransitionsGraph = () => {
       />
       <Tooltip
         formatter={(value, name, props) => {
-          console.log(value);
-          console.log(typeof value);
           return value.toFixed(2) + 'kg';
         }}
         labelFormatter={(value, name, props) => {
