@@ -4,7 +4,8 @@
     "dev": "$(npm bin)/parcel src/index.html",
     "production-test": "npm run production-test:prepare && npm run production-test:run",
     "production-test:prepare": "rm -rf ./production-test && mkdir production-test && cp -r docs production-test/my-weight-transitions",
-    "production-test:run": "$(npm bin)/http-server production-test"
+    "production-test:run": "$(npm bin)/http-server production-test",
+    "rebuild": "rm -rf ./docs && npm run build"
   },
   "private": true,
   "dependencies": {
