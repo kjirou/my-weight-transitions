@@ -2,6 +2,9 @@
 
 Make a note of my weight transitions
 
+- [As a JSON file](/weight-transitions.json)
+- [As a graph on the web](https://kjirou.github.io/my-weight-transitions/)
+
 
 ## :wrench: Development
 ### Softwares that needs to be locally installed
