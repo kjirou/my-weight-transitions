@@ -5,7 +5,8 @@
     "production-test": "npm run production-test:prepare && npm run production-test:run",
     "production-test:prepare": "rm -rf ./production-test && mkdir production-test && cp -r docs production-test/my-weight-transitions",
     "production-test:run": "$(npm bin)/http-server production-test",
-    "rebuild": "rm -rf ./docs && npm run build"
+    "rebuild": "rm -rf ./docs && npm run build",
+    "test": "$(npm bin)/mocha"
   },
   "private": true,
   "dependencies": {
