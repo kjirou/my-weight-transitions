@@ -4,7 +4,7 @@
     "deploy": "npm run deploy:clean && npm run deploy:build",
     "deploy:clean": "find . -type f -name 'src.*.js' -delete && find . -type f -name 'src.*.js.map' -delete",
     "deploy:build": "$(npm bin)/parcel build --out-dir . --public-url '/my-weight-transitions/' --no-cache src/index.html",
-    "dev": "$(npm bin)/parcel --public-url '/my-weight-transitions' src/index.html",
+    "dev": "$(npm bin)/parcel --public-url '/my-weight-transitions/' src/index.html",
     "production-test": "npm run production-test:prepare && npm run production-test:run",
     "production-test:prepare": "rm -rf ./production-test && mkdir production-test && cp -r docs production-test/my-weight-transitions",
     "production-test:run": "$(npm bin)/http-server production-test",
