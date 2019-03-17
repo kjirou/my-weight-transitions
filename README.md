@@ -1,5 +1,7 @@
 # my-weight-transitions
 
+[![Build Status](https://travis-ci.org/kjirou/my-weight-transitions.svg?branch=master)](https://travis-ci.org/kjirou/my-weight-transitions)
+
 Make a note of my weight transitions
 
 - [As a JSON file](/weight-transitions.json)
