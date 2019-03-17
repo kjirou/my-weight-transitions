@@ -4,7 +4,8 @@ node_js:
 before_script:
   - npm run test
 script:
-  - rm -r docs
+  # TODO: Want to run it at the time of branch=master
+  - npm run rebuild
 deploy:
   provider: pages
   skip-cleanup: true
