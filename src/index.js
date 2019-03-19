@@ -31,7 +31,7 @@ const mapWeightTransitionsToGraphData = (weightTransitions) => {
     const utcDateString = `${dateString} 00:00:00+0000`;
     const date = new Date(utcDateString);
     if (
-      date.toString() === 'Invalid date' ||
+      date.toString() === 'Invalid Date' ||
       date.getUTCFullYear() < 2018 ||
       date.getUTCFullYear() >= 3000
     ) {
