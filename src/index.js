@@ -28,7 +28,7 @@ const mapWeightTransitionsToGraphData = (weightTransitions) => {
     const year = dateString.replace(/^(\d+)-\d+-\d+$/, '$1');
     const month =dateString.replace(/^\d+-(\d+)-\d+$/, '$1');
     const day = dateString.replace(/^\d+-\d+-(\d+)$/, '$1');
-    const utcDateString = `${dateString} 00:00:00+0000`;
+    const utcDateString = `${dateString}T00:00:00+00:00`;
     const date = new Date(utcDateString);
     if (
       date.toString() === 'Invalid Date' ||
