@@ -11,7 +11,8 @@ Make a note of my weight transitions.
 ## :wrench: Development
 ### Softwares that needs to be locally installed
 
-- [Node.js](https://nodejs.org/) `== 10`
+- [Node.js](https://nodejs.org/)
+  - Its version is defined into the [.nvmrc](/.nvmrc).
 
 ### Install this application
 
