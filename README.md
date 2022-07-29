@@ -1,6 +1,7 @@
 # my-weight-transitions
 
-[![Build Status](https://travis-ci.org/kjirou/my-weight-transitions.svg?branch=master)](https://travis-ci.org/kjirou/my-weight-transitions)
+![Run Tests](https://github.com/kjirou/my-weight-transitions/actions/workflows/run-tests.yml/badge.svg)
+![Deploy](https://github.com/kjirou/my-weight-transitions/actions/workflows/deploy.yml/badge.svg)
 
 Make a note of my weight transitions.
 
@@ -26,4 +27,3 @@ npm install
 ## :ship: Deploy Flow
 
 - [This web page](https://kjirou.github.io/my-weight-transitions/) is automatically deployed when it merges commits into the master branch.
-- Ref) [Travis CI - GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/)
