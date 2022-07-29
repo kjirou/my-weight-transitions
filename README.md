@@ -1,6 +1,7 @@
 # my-weight-transitions
 
-[![Build Status](https://travis-ci.org/kjirou/my-weight-transitions.svg?branch=master)](https://travis-ci.org/kjirou/my-weight-transitions)
+![Run Tests](https://github.com/kjirou/social-game-rewards-backend/workflows/Run%20Tests/badge.svg)
+![Deploy](https://github.com/kjirou/social-game-rewards-backend/workflows/Deploy/badge.svg)
 
 Make a note of my weight transitions.
 
