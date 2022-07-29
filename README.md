@@ -1,7 +1,7 @@
 # my-weight-transitions
 
-![Run Tests](https://github.com/kjirou/social-game-rewards-backend/workflows/Run%20Tests/badge.svg)
-![Deploy](https://github.com/kjirou/social-game-rewards-backend/workflows/Deploy/badge.svg)
+![Run Tests](https://github.com/kjirou/my-weight-transitions/actions/workflows/run-tests.yml/badge.svg)
+![Deploy](https://github.com/kjirou/my-weight-transitions/actions/workflows/deploy.yml/badge.svg)
 
 Make a note of my weight transitions.
 
