@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
-    "http-server": "^0.11.1",
+    "http-server": "^14.1.1",
     "mocha": "^6.0.2",
     "parcel-bundler": "^1.12.0"
   }
