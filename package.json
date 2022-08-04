@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy": "$(npm bin)/parcel build --out-dir . --public-url '/my-weight-transitions/' --no-cache src/index.html",
+    "deploy": "$(npm bin)/parcel build --dist-dir . --public-url '/my-weight-transitions/' --no-cache src/index.html",
     "dev": "$(npm bin)/parcel --public-url '/my-weight-transitions/' src/index.html",
     "production-test": "npm run production-test:prepare && npm run production-test:run",
     "production-test:prepare": "rm -rf ./dist && rm -rf ./production-test && npm run production-test:prepare:build && mkdir production-test && cp -r dist production-test/my-weight-transitions",
