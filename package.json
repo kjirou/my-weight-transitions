@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy": "$(npm bin)/parcel build --out-dir . --public-url '/my-weight-transitions/' --no-cache src/index.html",
+    "deploy": "$(npm bin)/parcel build --dist-dir . --public-url '/my-weight-transitions/' --no-cache src/index.html",
     "dev": "$(npm bin)/parcel --public-url '/my-weight-transitions/' src/index.html",
     "production-test": "npm run production-test:prepare && npm run production-test:run",
     "production-test:prepare": "rm -rf ./dist && rm -rf ./production-test && npm run production-test:prepare:build && mkdir production-test && cp -r dist production-test/my-weight-transitions",
@@ -15,9 +15,8 @@
     "recharts": "^2.1.13"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.18.6",
     "http-server": "^14.1.1",
     "mocha": "^10.0.0",
-    "parcel-bundler": "^1.12.5"
+    "parcel": "^2.7.0"
   }
 }
