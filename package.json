@@ -15,7 +15,6 @@
     "recharts": "^2.1.13"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.18.6",
     "http-server": "^14.1.1",
     "mocha": "^10.0.0",
     "parcel": "^2.7.0",
