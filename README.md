@@ -26,4 +26,4 @@ npm install
 
 ## :ship: Deploy Flow
 
-- [This web page](https://kjirou.github.io/my-weight-transitions/) is automatically deployed when it merges commits into the master branch.
+- [This web page](https://kjirou.github.io/my-weight-transitions/) is automatically deployed when it merges commits into the main branch.
