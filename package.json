@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "deploy": "$(npm bin)/parcel build --dist-dir . --public-url '/my-weight-transitions/' --no-cache src/index.html",
-    "dev": "$(npm bin)/parcel --public-url '/my-weight-transitions/' src/index.html",
+    "deploy": "parcel build --dist-dir . --public-url '/my-weight-transitions/' --no-cache src/index.html",
+    "dev": "parcel --public-url '/my-weight-transitions/' src/index.html",
     "production-test": "npm run production-test:prepare && npm run production-test:run",
     "production-test:prepare": "rm -rf ./dist && rm -rf ./production-test && npm run production-test:prepare:build && mkdir production-test && cp -r dist production-test/my-weight-transitions",
-    "production-test:prepare:build": "$(npm bin)/parcel build --public-url '/my-weight-transitions/' src/index.html",
-    "production-test:run": "$(npm bin)/http-server production-test",
-    "test": "$(npm bin)/mocha"
+    "production-test:prepare:build": "parcel build --public-url '/my-weight-transitions/' src/index.html",
+    "production-test:run": "http-server production-test",
+    "test": "mocha"
   },
   "private": true,
   "dependencies": {
