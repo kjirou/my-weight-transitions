@@ -1,5 +1,5 @@
 const React = require('react');
-const ReactDOM = require('react-dom');
+const {createRoot} = require('react-dom/client');
 const {
   CartesianGrid,
   LineChart,
@@ -109,8 +109,6 @@ const Root = () => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    React.createElement(Root, {}),
-    document.querySelector('.js-app')
-  );
+  const root = createRoot(document.querySelector('.js-app'));
+  root.render(React.createElement(Root, {}));
 });
